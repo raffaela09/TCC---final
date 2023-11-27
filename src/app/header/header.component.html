@@ -1,0 +1,95 @@
+<div class="head" [ngClass]="getHeadClass()">
+    <div class="head-content">
+        <div class="head-content-left">
+            <div class="search-container">
+                <div *ngIf="!canShowSearchAsOverlay" class="normal-search">
+                    <input type="search" class="search" name="" id="" placeholder="Pesquisar...">
+                    <i class='icon bx bx-search-alt' ></i>
+                </div>
+                <div *ngIf="canShowSearchAsOverlay">
+                    <button
+                        [cdkMenuTriggerFor]="searchOverLay"
+                        class="search-menu-btn ripple"
+                    >
+
+                    <i class='icon bx bx-search-alt' ></i>
+
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="head-content-right">
+            <div class="head-menu">
+                <div class="head-menu-item">
+                    <button class="head-menu-item-btn ripple" [cdkMenuTriggerFor]="notificationOverlay">
+                        <i class='bx bxs-bell-ring' ></i>
+                    </button>
+                </div>
+                <div class="head-menu-item">
+                    <button class="head-menu-item-btn ripple" >
+                        <i class='bx bxs-comment' ></i>
+                    </button>
+                </div>
+            </div>
+            <div class="head-user-avatar-container">
+                <div class="head-user-avatar" [cdkMenuTriggerFor]="userOverlay">
+                    <img src="../../assets/user.png" alt="user" class="user-avatar">
+                    <div class="circle-indicator pulse"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #searchOverLay>
+    <div class="overlay overlay-search overlay-fall" cdkMenu>
+        <input type="search" class="search" placeholder="Pesquisar">
+        <button class="search-btn">
+            <i class='icon bx bx-search-alt' ></i>
+        </button>
+    </div>
+</ng-template>
+
+
+<ng-template #notificationOverlay>
+    <div class="overlay overlay-notification overlay-fall">
+        <ul>
+            <li class="notification-head-container">
+                <div class="notification-head">Notificações</div>
+                <span class="view-all-link">
+                    <a>Ver tudo</a>
+                </span>
+            </li>
+            <li class="notification-message-container" *ngFor="let nofication of notifications" cdkMenuItem>
+                <i [class]="nofication.icon"></i>
+                <div>
+                    <div class="notification-subject">
+                        {{nofication.subject}}
+                    </div>
+                    <p class="notification-desc">
+                        {{nofication.description}}
+                    </p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+
+</ng-template>
+<ng-template #userOverlay>
+    <div class="overlay overlay-user overlay-fall" cdkMenu>
+        <ul>
+            <li *ngFor="let item of userItems" cdkMenuItem>
+                <p [routerLink]="item.routerlink"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}"
+            >
+                    <i class="icon" [ngClass]="item.icon"></i>
+                    <span>{{item.label}}</span>
+            </p>
+
+            </li>
+        </ul>
+    </div>
+</ng-template>

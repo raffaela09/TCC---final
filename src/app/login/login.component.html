@@ -1,0 +1,47 @@
+<div class="main">
+    <img class="book" src="" alt="">
+    <div class="container">
+        <div class="img">
+            <h1>Biblioteca virtual</h1>
+            <img src="./assets/bookss.png" alt="">
+        </div>
+       
+        <div class="login-container">
+            <form  action="" method="post">
+                <img class="avatar" src="./assets/user2.png" alt="">
+                <h2>Bem-vindo!</h2>
+                <h4>Faça o login:</h4>
+                <div class="input-div one focus">
+                    <div class="i">
+                        <i class='bx bxs-envelope' ></i>
+                    </div>
+                    
+                    <div>
+                        
+                        <input name="email" class="input email" type="text" [(ngModel)]="email" required>
+                        <span>E-mail</span>
+                    </div>
+                </div>
+                <div class="input-div one focus">
+                    <div class="i">
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+
+                    <div>
+                    
+                        <input name="password" class="input" type="text" [(ngModel)]="password"  required>
+                        <span>Senha</span>
+                    </div>
+                </div>
+
+                
+              
+
+                <a href="#">Esqueceu a Senha?</a>
+                <button (click)="loginUser()" type="submit" class="bnt">Entrar</button>
+                <div class="account"><a routerLink="/create-login">Não possui uma conta? Crie já!</a></div>
+
+            </form>
+        </div>
+    </div>
+</div>

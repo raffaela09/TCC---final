@@ -1,0 +1,50 @@
+
+/* You can add global styles to this file, and also import other style files */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+  @import '~@angular/cdk/overlay-prebuilt.css';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+  --body: #f4f7fa;
+  --text-menu: #495057;
+  --body-card: #fff;
+  --border: #e6edef;
+  --borde2: #838993;
+  --icon: #495057;
+  --icon-b: #eff2f3;
+  --side:green;
+  --desc: #eff2ef;
+  --drop: #f7f8ff;
+  --span: #777;
+  --side1:rgb(4, 130, 4);
+  --hover: #e1d8d85c;
+  
+  
+  
+}
+:root .dark{
+  --body: #3c3c3c;
+  --text-menu: #fff;
+  --body-card:#2f2f2f;
+  --border: #222121;
+  --borde2: #0f0f0f;
+  --icon: #fff;
+  --icon-b: #444040;
+  --side: #04483c;
+  --desc: #272626;
+  --drop: #433f3f;
+  --span: #dcdcdc;
+  --side1: #024337;
+  --hover: #3c3c3c;
+}
+
+
+body{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body);
+}

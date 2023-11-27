@@ -1,0 +1,127 @@
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 37.5rem;
+    height: 35rem;
+    border-radius: 1rem;
+    background: var(--body-card);
+    box-shadow: 0 .25rem .5rem var(--border);
+    
+}
+
+h1{
+    color: var(--text-menu);
+}
+
+.card .post{
+    font-size: 14px;
+    color: var(--span);
+}
+
+input[type="file"]{
+    display: none;
+}
+.custom-file{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-file-label{
+    width: 35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 2px solid var(--border2);
+    border-radius: .2rem;
+    font-size: 1rem;
+    color: var(--text-menu);
+    background-color: var(--body);
+    box-shadow: 0 .25rem .5rem var(--border);
+    margin: 15px;
+}
+
+label span:nth-child(2){
+    color: #fff;
+    background-color: var(--side);
+    padding: .4rem .4rem;
+    border-radius: .3rem;
+    /* margin-left: 3rem; */
+    cursor: pointer;
+    box-shadow: 0 .25rem .5rem var(--border);
+}
+#resetar{display: none;}
+
+.content .card .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .card .buttons .resetar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: var(--side);
+    border: none;
+    border-radius: .3rem;
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+    margin: 15px;
+    box-shadow: 0 .25rem .5rem var(--border);
+}
+.custom-desc{
+    display: flex;
+    flex-direction: column;
+}
+.custom-desc .input1{
+    outline: none;
+    color: var(--text-menu);
+    width: 35rem;
+    height: 2rem;
+    border: none;
+    padding: 5px;
+    box-shadow: 0 .25rem .5rem var(--border);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: .3rem;
+    background-color: var(--body);
+}
+.custom-desc .input2{
+    background-color: var(--body);
+    color: var(--text-menu);
+    width: 35rem;
+    height: 5rem;
+    border: none;
+    padding: 5px;
+    box-shadow: 0 .25rem .5rem var(--border);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    outline: none;
+    border-radius: .3rem;
+}
+.custom-desc span{
+    color: var(--text-menu);
+}
+.custom-desc input::placeholder{
+    color: var(--text-menu);
+}
+.custom-desc textarea::placeholder{
+    color: var(--text-menu);
+}
+textarea{
+    display: flex;
+    resize: none;
+}

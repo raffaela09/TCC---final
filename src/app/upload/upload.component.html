@@ -1,0 +1,38 @@
+<div class="content">
+    <div class="card">
+        <div>
+            <h1>Faça um novo post</h1>
+            <span class="post">você pode adicionar novas postagens aqui</span>
+        </div>
+ 
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile" (change)="onChange($event)" accept="application/pdf">
+            <label for="customFile" class="custom-file-label">
+                
+                <span id="custom-file-span">Selecionar Arquivo</span>
+                <span>Procurar</span>
+            </label>
+        </div>
+        <form action="">
+            <div class="custom-desc">
+                <span>Titulo:</span>
+                <input type="text" class="input1" placeholder="Dê um titulo a sua postagem">
+            </div>
+
+            <div class="custom-desc">
+                <span>Descrição:</span>
+                <textarea  class="input2" placeholder="Faça uma breve descrição"></textarea>
+            </div>
+
+            <div class="buttons">
+                <input type="reset" id="resetar">
+                <label for="resetar" class="resetar">Excluir</label>
+
+                <input type="input" id="resetar">
+                <label for="resetar" class="resetar">Salvar</label>
+            </div>
+        </form>
+    </div>
+    
+</div>
+    

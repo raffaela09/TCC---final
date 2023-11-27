@@ -1,0 +1,12 @@
+
+
+<!-- <router-outlet></router-outlet> -->
+<app-sidenav (onToggleSideNav)="onToggleSideNav($event)" *ngIf="mostrarMenu"></app-sidenav>
+<app-header
+    [collapsed]="isSideNavCollapsed"
+    [screenWidth]="screenWidth"
+ *ngIf="mostrarMenu"></app-header>
+<app-body
+    [collapsed]="isSideNavCollapsed"
+    [screenWidth]="screenWidth"
+></app-body>
